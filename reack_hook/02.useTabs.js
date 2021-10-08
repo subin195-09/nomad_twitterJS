@@ -23,6 +23,7 @@ const useTabs = (initialTab, allTabs) => {
   };
 }
 
+// btn event 처리 update 해야함
 export default function App() {
   const tabs = useTabs(0, content);
   return (
