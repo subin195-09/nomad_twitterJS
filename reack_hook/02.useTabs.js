@@ -23,14 +23,18 @@ const useTabs = (initialTab, allTabs) => {
   };
 }
 
-// btn event 처리 update 해야함
 export default function App() {
-  const tabs = useTabs(0, content);
+  const { currentItem, changeItem } = useTabs(0, content);
   return (
     <div className="App">
       {content.map((section, index) => (
-        <button onClick={() => changeItem(index)}>{section.tab}</button>
+        <button onClick={() => changeItem(index)}>
+          {section.tab}
+        </button>
       ))}
+      <div>
+        {currentItem.content}
+      </div>
     </div>
   );
 };
